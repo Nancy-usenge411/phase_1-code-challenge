@@ -66,8 +66,30 @@ function calculateNHIF(basicSalary){
     } else {
         return 0
     }  
+ 
+}
 
-     
+function nssfDeduction(monthlySalary,monthPay) {
+    // let monthPay = parseFloat(prompt("Enter  year of payment for monthly salary"));
+    // let monthlySalary = parseFloat(prompt("Enter monthly for the year salary"));
+    let deduction=0;
+    if (monthlySalary <= 7000 && monthPay >= 2024) {
+        deduction =  monthlySalary * 0.06;
+        console.log(`NSSF deduction: ${deduction}`); return;
+    } else if (monthlySalary> 7000 && monthlySalary <= 36000 && monthPay >= 2024) {
+        deduction = monthlySalary * 0.06;
+        console.log(` NSSF deduction: ${deduction}`); return;
+    } else if (monthlySalary <=6000 && monthPay <=2023){
+        deduction = monthlySalary* 0.06;
+        console.log(` NSSF deduction: ${deduction}`); return;
+    }else if (monthlySalary > 6000 && monthlySalary <= 18000 && monthPay <=2023){
+        deduction = monthlySalary * 0.06;
+        console.log( `NSSF deduction: ${deduction}`); return;
+    }else {
+        console.log("NSSF deduction: 0");
+        return;
+    }
 }
 
 calculateNetPay(50000)
+nssfDeduction(8000,2024)

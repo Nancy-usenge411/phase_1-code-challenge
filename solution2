@@ -1,16 +1,18 @@
-function calculateDemeritPoints(points){
-    const speedLimit= 70;
-    const kmPerDemeritPoint= 5;
-    const pointsPerKmAboveLimit = 1;
-
+function calculateDemeritPoints(speed, speedLimit){
     let excessSpeed= speed - speedLimit;
-let demeritPoints = Math.floor(excessSpeed/kmPerDemeritPoint)*pointsPerKmAboveLimit;
 
-if (demeritPoints>12){
-    return 'licence suspended'
-}else 'demeritPoints';
+    console.log(`Excess Speed: ${excessSpeed} km/h`);
+    
+
+
+    if (demritPoints>12){
+        return 'licence suspended'
+    } else 'demeritPoints'
+
+
+    return calculateDemeritPoints;
 }
 
 
 
-calculateDemeritPoints(20)
+calculateDemeritPoints(70,90)
